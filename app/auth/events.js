@@ -116,8 +116,7 @@ const checkWinner = function () {
     && $('.play5').text() !== '' && $('.play6').text() !== '' && $('.play7').text() !== '' && $('.play8').text() !== '' && $('.play9').text() !== '') {
     console.log('tie')
     $('#winnerOne').text('TIE GAME')
-  }
-    else {
+  } else {
     return false
   }
 }
@@ -125,33 +124,18 @@ const checkWinner = function () {
 const onNewGame = function (event) {
   // prevent the default action of refreshing the page
   event.preventDefault()
-
-  // we pass in the formData because it will need the info like email, password etc
-  // make a POST /sign-up request, pass it the email/password/confirmation
   api
     .newGame()
-    // if our sign up request is successful, run the signUpSuccess function
+    // start new game
     .then(ui.newGameStart)
-    // otherwise, if an error occurred, run a signUpFailure function
-    // .catch(ui.signOutFailure)
 }
 
 // define a variable for the first move, but make it the opposite so the first move is X
 let firstPlay = 'O'
 const onClick = function (event) {
-  // console.log('event is ', event)
-  // console.log(firstPlay)
-// console.log($(event.target).text())
   if ($(event.target).text() === '') {
-    const win = checkWinner()
-    if (win === true) {
-      if (firstPlay === 'O') {
-        $('#winnerOne').text('X is the winner!')
-      } else if (firstPlay === 'X') {
-        $('#winnerOne').text('O is the winner!')
-      }
-      $('#gameOver').show()
-    } else if (win === false) {
+    let win = checkWinner()
+    if (win === false) {
       if (firstPlay === 'O') {
         $(event.target).text('X')
         firstPlay = 'X'
@@ -159,21 +143,26 @@ const onClick = function (event) {
         $(event.target).text('O')
         firstPlay = 'O'
       }
-      checkWinner()
-
-      // create a conditional here if win state is true
+    }
+    win = checkWinner()
+    if (win === true) {
+      if (firstPlay === 'O') {
+        $('#winnerOne').text('O is the winner!')
+      } else if (firstPlay === 'X') {
+        $('#winnerOne').text('X is the winner!')
+      }
+      $('#gameOver').show()
     }
   }
 }
 
+// reset the game board after a winner/tie game
 const onNewGameReset = function (event) {
   event.preventDefault()
 
-  // we pass in the formData because it will need the info like email, password etc
-  // make a POST /sign-up request, pass it the email/password/confirmation
   api
     .newGame()
-    // if our sign up request is successful, run the signUpSuccess function
+    // reset the game by starting a new one
     .then(ui.newGameStart)
 }
 

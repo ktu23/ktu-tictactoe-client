@@ -52,6 +52,7 @@ const signInSuccess = function(responseData) {
   $('#before-sign-in').hide()
   // After we sign in, show the section with the id `after-sign-in`
   $('#after-sign-in').show()
+  // hide all the content from main page after logging in
   $('#after-new-game').hide()
 
   $('#gameOver').hide()
@@ -91,7 +92,7 @@ const signOutSuccess = function(responseData) {
 }
 
 const signOutFailure = function (error) {
-  // tell the user it was successful
+  // tell the user the sign out failed
   $('#error-message').text('Sign out failed')
 
   // remove existing classes, then add a red text-danger class from bootstrap
@@ -117,6 +118,9 @@ const newGameStart = function (error) {
 
   $('#after-new-game').show()
 
+  // on 'play' - reset the game board with empty divs --- '' string
+  $('.play').text('')
+
   // print the error
   console.error('error is', error)
 }
@@ -129,5 +133,4 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   newGameStart
-
 }
