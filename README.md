@@ -38,3 +38,10 @@ there should be a variable that i set somwehre in my events.js document and it s
 it can be let winState = false
 when check winner and winner = true
 set winstate = true 
+
+
+
+
+Add Wireframes
+Add User Stories
+Add a proper ReadMe file
