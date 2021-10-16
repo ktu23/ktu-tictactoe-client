@@ -62,7 +62,7 @@ const onSignOut = function (event) {
 // we will have to do this for every possible winning combo - so 8 total
 
 const checkWinner = function () {
-  // console.log($('.play1').text())
+  // check if each possible win combo is there and for X or O
   if ($('.play1').text() === 'O' && $('.play2').text() === 'O' && $('.play3').text() === 'O') {
     console.log('123')
     return true
@@ -111,7 +111,7 @@ const checkWinner = function () {
   } else if ($('.play3').text() === 'X' && $('.play5').text() === 'X' && $('.play7').text() === 'X') {
     console.log('357 X')
     return true
-    // check tie
+    // check tie game
   } else if ($('.play1').text() !== '' && $('.play2').text() !== '' && $('.play3').text() !== '' && $('.play4').text() !== ''
     && $('.play5').text() !== '' && $('.play6').text() !== '' && $('.play7').text() !== '' && $('.play8').text() !== '' && $('.play9').text() !== '') {
     console.log('tie')
