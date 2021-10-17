@@ -11,7 +11,8 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
+    <body style="background-color: #dfe7fd">
+      <div class="centerwhole">
       <h1>Kevin's Tic Tac Toe Game</h1>
       <!-- <h3>Welcome to the Game!</h3> -->
 
@@ -65,27 +66,28 @@
 
       <!-- After New Game Start-->
 
-      <section id="after-new-game" class="hide">
+      <section id="after-new-game" class="hide container">
         <h4>Have fun!</h4>
         <h4>Play a Tic Tac Toe Game!</h4>
-        <div id="gamegrid">
-          <div class="row">
+        <!-- <div id="gamegrid"> -->
+          <div class="row h-100 board">
           <!-- adding a second class 'play' and can refer to all of the divs/cells by adding the class -->
-            <div class="play1 play"></div>
-            <div class="play2 play"></div>
-            <div class="play3 play"></div>
-          </div>
-          <div class="row">
-            <div class="play4 play"></div>
-            <div class="play5 play"></div>
-            <div class="play6 play"></div>
-          </div>
-          <div class="row">
-            <div class="play7 play"></div>
-            <div class="play8 play"></div>
-            <div class="play9 play"></div>
-          </div>
-        </div>
+            <div class="col-4 play1 play box"></div>
+            <div class="col-4 play2 play box"></div>
+            <div class="col-4 play3 play box"></div>
+          <!-- </div> -->
+          <!-- <div class="row"> -->
+            <div class="col-4 play4 play box"></div>
+            <div class="col-4 play5 play box"></div>
+            <div class="col-4 play6 play box"></div>
+          <!-- </div>
+          <div class="row"> -->
+            <div class="col-4 play7 play box"></div>
+            <div class="col-4 play8 play box"></div>
+            <div class="col-4 play9 play box"></div>
+          <!-- </div>
+        </div> -->
+      </div>
 
         <div id="winnerOne">
         </div>
@@ -107,6 +109,6 @@
         <div id="error-message"> </div>
         <div id="games-display"> </div>
       </section>
-
+    </div>
     </body>
 </html>

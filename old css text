@@ -1,12 +1,7 @@
-@import '~bootstrap/scss/bootstrap';
+/* @import '~bootstrap/scss/bootstrap';
 
 .container {
   height: 100vh;
-}
-
-.centerwhole {
-  margin: auto;
-  text-align: center;
 }
 
 .board {
@@ -79,6 +74,11 @@
     user-select: none;
 
 }
+// .border {
+//   border: 3px solid $black;
+//   margin: 20px;
+//   padding: 20px;
+// }
 
 // select the section with the id after-sign-in
 #after-sign-in {
@@ -99,3 +99,17 @@
   // border: 1px solid black;
 
 }
+
+// .row {
+//   // border: 1px solid green;
+//   display: flex;
+// }
+
+// // display the game grid with a border and change the height/width
+// .row > div {
+//   border: 1px solid blue;
+//   display: flex;
+//   width: 100px;
+//   height: 100px;
+// }
+ */
