@@ -133,6 +133,9 @@ const onNewGame = function (event) {
 // define a variable for the first move, but make it the opposite so the first move is X
 let firstPlay = 'O'
 const onClick = function (event) {
+  const box = $(event.target)
+  box.css('background', 'transparent')
+
   if ($(event.target).text() === '') {
     let win = checkWinner()
     if (win === false) {
@@ -143,6 +146,7 @@ const onClick = function (event) {
         $(event.target).text('O')
         firstPlay = 'O'
       }
+      $('#gameOver').show()
     }
     win = checkWinner()
     if (win === true) {
