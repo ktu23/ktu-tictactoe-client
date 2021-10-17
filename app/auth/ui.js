@@ -121,6 +121,8 @@ const newGameStart = function (error) {
   // on 'play' - reset the game board with empty divs --- '' string
   $('.play').text('')
 
+  $('#games-display').text('')
+
   // print the error
   console.error('error is', error)
 }

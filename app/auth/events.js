@@ -116,6 +116,7 @@ const checkWinner = function () {
     && $('.play5').text() !== '' && $('.play6').text() !== '' && $('.play7').text() !== '' && $('.play8').text() !== '' && $('.play9').text() !== '') {
     console.log('tie')
     $('#winnerOne').text('TIE GAME')
+    $('#winnerOne').show()
   } else {
     return false
   }
@@ -156,13 +157,26 @@ const onClick = function (event) {
         $('#winnerOne').text('X is the winner!')
       }
       $('#gameOver').show()
+      $('#winnerOne').show()
     }
   }
 }
 
 // reset the game board after a winner/tie game
 const onNewGameReset = function (event) {
+  firstPlay = 'O'
   event.preventDefault()
+  $('.play1').css('background-color', 'white')
+  $('.play2').css('background-color', 'white')
+  $('.play3').css('background-color', 'white')
+  $('.play4').css('background-color', 'white')
+  $('.play5').css('background-color', 'white')
+  $('.play6').css('background-color', 'white')
+  $('.play7').css('background-color', 'white')
+  $('.play8').css('background-color', 'white')
+  $('.play9').css('background-color', 'white')
+
+  $('#winnerOne').hide()
 
   api
     .newGame()
