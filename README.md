@@ -34,13 +34,4 @@ To Do:
 3. Add a proper ReadMe file
 4. Style CSS / boxes and layout
 5. Reset game  - start with X again
-6. At end of game with reset button - also remove the message of X/O is winner - reset the X/O msg
 
-
-
-NEED HELP WITH: 
-5. Reset game  - start with X again
-6. At end of game with reset button - also remove the message of X/O is winner - reset the X/O msg
-   1. also make it show above the reset button
-7. make it so reset button only shows after game is over
-8. 
