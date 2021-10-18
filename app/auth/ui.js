@@ -90,7 +90,7 @@ const signOutSuccess = function(responseData) {
   // After we sign out, show the section with the id `before-sign-in`
   $('#before-sign-in').show()
   // After we sign out, hide the section with the id `after-sign-in`
-  $('#newgameshown').hide()
+  $('#newgameshow').hide()
   $('#after-new-game').hide()
   $('#signoutbutton').hide()
   $('#gameOver').hide()
