@@ -52,8 +52,10 @@ const signInSuccess = function(responseData) {
   $('#before-sign-in').hide()
   // After we sign in, show the section with the id `after-sign-in`
   $('#after-sign-in').show()
+
   $('#signoutbutton').show()
   $('#newgameshow').show()
+
   // hide all the content from main page after logging in
   $('#after-new-game').hide()
 
