@@ -52,6 +52,8 @@ const signInSuccess = function(responseData) {
   $('#before-sign-in').hide()
   // After we sign in, show the section with the id `after-sign-in`
   $('#after-sign-in').show()
+  $('#signoutbutton').show()
+  $('#newgameshow').show()
   // hide all the content from main page after logging in
   $('#after-new-game').hide()
 
@@ -86,7 +88,7 @@ const signOutSuccess = function(responseData) {
   // After we sign out, show the section with the id `before-sign-in`
   $('#before-sign-in').show()
   // After we sign out, hide the section with the id `after-sign-in`
-  $('#after-sign-in').hide()
+  $('#newgameshown').hide()
 
   console.log('responseData is', responseData)
 }
@@ -114,9 +116,10 @@ const newGameStart = function (error) {
 
   // After clicking new game, hide all previous sections and show only game
   $('#before-sign-in').hide()
-  $('#after-sign-in').hide()
+  $('#newgameshow').hide()
 
   $('#after-new-game').show()
+  $('#signoutbutton').show()
 
   // on 'play' - reset the game board with empty divs --- '' string
   $('.play').text('')

@@ -129,6 +129,7 @@ const onNewGame = function (event) {
     .newGame()
     // start new game
     .then(ui.newGameStart)
+
 }
 
 // define a variable for the first move, but make it the opposite so the first move is X
@@ -177,6 +178,7 @@ const onNewGameReset = function (event) {
   $('.play9').css('background-color', 'white')
 
   $('#winnerOne').hide()
+  $('#sign-out').show()
 
   api
     .newGame()
