@@ -123,13 +123,24 @@ const checkWinner = function () {
 }
 
 const onNewGame = function (event) {
+  firstPlay = 'O'
   // prevent the default action of refreshing the page
   event.preventDefault()
   api
     .newGame()
     // start new game
     .then(ui.newGameStart)
+  $('.play1').css('background-color', 'white')
+  $('.play2').css('background-color', 'white')
+  $('.play3').css('background-color', 'white')
+  $('.play4').css('background-color', 'white')
+  $('.play5').css('background-color', 'white')
+  $('.play6').css('background-color', 'white')
+  $('.play7').css('background-color', 'white')
+  $('.play8').css('background-color', 'white')
+  $('.play9').css('background-color', 'white')
 
+  $('#winnerOne').hide()
 }
 
 // define a variable for the first move, but make it the opposite so the first move is X
