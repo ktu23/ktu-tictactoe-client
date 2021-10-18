@@ -89,6 +89,10 @@ const signOutSuccess = function(responseData) {
   $('#before-sign-in').show()
   // After we sign out, hide the section with the id `after-sign-in`
   $('#newgameshown').hide()
+  $('#after-new-game').hide()
+  $('#signoutbutton').hide()
+  $('#gameOver').hide()
+  $('#error-message').text('Welcome to the game! A new game has started.').hide()
 
   console.log('responseData is', responseData)
 }
