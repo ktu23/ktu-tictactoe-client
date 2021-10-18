@@ -35,3 +35,9 @@ To Do:
 4. Style CSS / boxes and layout
 5. Reset game  - start with X again
 
+merging
+1. git push origin development - push from development/etc branch
+2. merge on github
+3.  in terminal --> go to main branch 
+4.  git pull origin main
+5.  this will merge development branch --> main branch
