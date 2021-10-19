@@ -37,4 +37,3 @@ events.js
 5. onNewGame - this starts a new game of Tic Tac Toe
 6. onClick - this is the function of the game board that allows the user to rotate with X and O, starting with X to play the game. It will also freeze the game board once a winner has been declared and it will say who has won the game (X or O)
 7. onNewGameReset - this resets the game board and restarts the game at the first player of X
-
